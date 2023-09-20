@@ -70,7 +70,7 @@ from avg_values
 pivot(SUM(avg_value) FOR platform IN ('MOBILE_APP','ONLINE_INTERFACE')) as p
 )
 select
-    round(count(preference) / (select count(customer_id) from superfan) * 100, 1) as percentage,
+    round(count(*) * 100.0 / sum(count(*)) over(), 1) as percentage,
     preference
 from superfan
 group by preference;
