@@ -21,9 +21,7 @@ select * from PD2023_WK07_TRANSACTION_PATH;
 -- clean account information
 with account_information_clean as (
 select 
-    account_number,
-    account_type,
-    value as account_holder_id,
+    distinct account_number,
     balance_date,
     balance
 -- split accounts which are in 1 cell to rows
