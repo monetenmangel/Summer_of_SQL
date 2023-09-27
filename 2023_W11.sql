@@ -1,3 +1,14 @@
+-- Preppin' Data 2023 Week 11
+-- Ben Mangel
+-- 2023-09-27
+
+-- Append the Branch information to the Customer information
+-- Transform the latitude and longitude into radians
+-- Find the closest Branch for each Customer
+--     Make sure Distance is rounded to 2 decimal places
+-- For each Branch, assign a Customer Priority rating, the closest customer having a rating of 1
+-- Output the data
+
 select * from PD2023_WK11_DSB_BRANCHES;
 select * from PD2023_WK11_DSB_CUSTOMER_LOCATIONS;
 
